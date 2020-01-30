@@ -19,7 +19,7 @@ OR
 		return (
 			<View style={styles.container}>
 				<GooglePlaces 
-					apiKey="YOUR_API_KEY" //required (Get from https://developers.google.com/places/web-service/intro)
+					apiKey="YOUR_API_KEY" //required (Get from https://developers.google.com/places/web-service/get-api-key)
 				/>
 			</View>
 		);
