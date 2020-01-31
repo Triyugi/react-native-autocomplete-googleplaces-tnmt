@@ -1,6 +1,6 @@
 {
   "name": "react-native-autocomplete-googleplaces-tnmt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Native Google Places Autocomplete Library",
   "main": "src/index.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "react-native",
     "google-places"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Triyugi/react-native-autocomplete-googleplaces-tnmt.git"
+  },
   "author": "TNMT",
   "license": "ISC"
 }

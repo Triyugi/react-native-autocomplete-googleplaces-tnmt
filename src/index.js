@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextInput, View, TouchableOpacity, Keyboard, TouchableWithoutFeedback, StyleSheet, Layout } from 'react-native';
+import { Text, TextInput, View, TouchableOpacity, Keyboard, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 
 export default class GooglePlaces extends React.Component {
 	
