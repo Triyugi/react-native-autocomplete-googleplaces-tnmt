@@ -12,7 +12,6 @@ export default class GooglePlaces extends React.Component {
 	
     componentDidMount() {
         //
-
     }
 	
 	handleAddressChangeDebounce = (destination) => {
@@ -39,10 +38,17 @@ export default class GooglePlaces extends React.Component {
 		}
 	}
 	
+	handlePress = (val) => {
+		this.setState({
+			searchValue: val.description,
+			predictions: null,
+		});
+		this.props.onAddressSelect(val);
+	}
+	
     render() {
         return (
             <View>
-				<Text>Hii</Text>
 				<TextInput
 					placeholder="Search..."
 					style={styles.searchInput}
@@ -52,7 +58,7 @@ export default class GooglePlaces extends React.Component {
 				{this.state.predictions && this.state.predictions.length > 0 && this.state.predictions.map((val,i) => {
 					return (
 						<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false} key={i}>
-							<Text style={styles.predictions}>{val.description}</Text>
+							<Text style={styles.predictions} onPress={()=>this.handlePress(val)}>{val.description}</Text>
 						</TouchableWithoutFeedback>
 					)
 				})}

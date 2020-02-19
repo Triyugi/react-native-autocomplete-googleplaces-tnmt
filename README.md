@@ -15,14 +15,22 @@ OR
 	import { StyleSheet, Text, View } from 'react-native';
 	import GooglePlaces from 'react-native-autocomplete-googleplaces-tnmt';
 
-	export default function App() {
-		return (
-			<View style={styles.container}>
-				<GooglePlaces 
-					apiKey="YOUR_API_KEY" //required (Get from https://developers.google.com/places/web-service/get-api-key)
-				/>
-			</View>
-		);
+	class App extends React.Component {
+	
+		getPlacesDetails = (value) => {
+			console.log(value); //places details
+		}
+		
+		render() {
+			return (
+				<View style={styles.container}>
+					<GooglePlaces 
+						apiKey="YOUR_API_KEY" //required (Get from https://developers.google.com/places/web-service/get-api-key)
+						onAddressSelect={this.getPlacesDetails}
+					/>
+				</View>
+			);
+		}
 	}
 
 	const styles = StyleSheet.create({
