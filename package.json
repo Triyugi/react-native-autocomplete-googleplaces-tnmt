@@ -1,6 +1,6 @@
 {
   "name": "react-native-autocomplete-googleplaces-tnmt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Native Google Places Autocomplete Library",
   "main": "src/index.js",
   "scripts": {
